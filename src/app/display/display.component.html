@@ -1,0 +1,20 @@
+<div class ="image-container">
+  <div class="row">
+
+
+    <div class="col-sm-4" *ngFor="let data of dataArray" >
+      <div style=" border: 1px solid;">
+      <img [src]="data.imageUrl" style="margin-bottom: 10px;" />
+      <div>
+        <img [src]="data.likeImg" class="image" />
+        <div class="item-type"> <b>{{data.type}}</b></div>
+        <div> {{data.itemName}}</div>
+        <button (click)="incrementLikes(data.id)">
+          <img [src]="data.likeImg" />
+        </button>{{data.likesCount}} 
+      </div>
+    </div>
+    </div>
+
+  </div>
+</div>
